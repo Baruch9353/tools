@@ -11,6 +11,7 @@ namespace _1905
         public override string Name { get; set; }
         public override string Weight { get; set; }
 
+        public override int counter { get; set; }
         public override void Describe()
         {
             Console.WriteLine("Hammer is a handheld tool with a heavy metal head used for impact force.");
@@ -18,7 +19,14 @@ namespace _1905
         }
         public override void Use()
         {
-            Console.WriteLine( "Hammer Used for driving nails, breaking objects, and assembling materials");
+            UseCount();
+            Console.WriteLine("Hammer Used for driving nails, breaking objects, and assembling materials Use until now  " + counter);
+        }
+
+        public override void UseCount()
+        {
+            counter++;
+
         }
     }
 }

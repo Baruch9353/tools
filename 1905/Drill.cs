@@ -11,6 +11,8 @@ namespace _1905
         public override string Name { get; set; }
         public override string Weight { get; set; }
 
+        public override int counter { get; set; }
+
         public override void Describe()
         {
             Console.WriteLine("Drill is a powered tool with a rotating bit designed for making precise holes.");
@@ -18,7 +20,14 @@ namespace _1905
         }
         public override void Use()
         {
-            Console.WriteLine( "Drill Used for drilling holes in wood, metal, and concrete, and for inserting screws and anchors");
+            UseCount();
+            Console.WriteLine("Drill Used for drilling holes in wood, metal, and concrete, and for inserting screws and anchors Use until now  " + counter);
+        }
+
+        public override void UseCount()
+        {
+            counter++;
+
         }
     }
 }
