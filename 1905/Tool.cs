@@ -11,8 +11,12 @@ namespace _1905
         public abstract string Name { get; set; }
         public abstract string Weight { get; set; }
 
+        public abstract int counter { get; set; }   
+
         public abstract void Describe();
         public abstract void Use();
+
+        public abstract void UseCount();
     }
 
     
